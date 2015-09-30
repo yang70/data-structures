@@ -11,9 +11,9 @@ This is a practice/demonstration repository to explore and create classic data s
 
 * **Stack** - This data structure was discussed in class and could be created nicely by incorporating the Linked List created above.  A stack data structure could be visualized as a pile of data, one on top of the other, where the last one in is the first one out.  There is no way to iterate the entire stack, only `push` new data to the top, or `pop` the top piece of data out.  As mentioned, I created the `Stack` class structure by requiring the `LinkedList` I created.  On `initialize` of a new `Stack` instance, it creates an instance of `LinkedList`.  I then designed the `push` and `pop` methods of `Stack` around the `insert` and `remove` methods of `LinkedList` which effectively restricts access to the `search` method of `LinkedList` since it is not a feature of a classic stack structure.  I also instituted a `peek` method in order to see what the top value is without actually removing it.
 
-Credit
+**Credit**
 ______
 Created with input from discussions with classmates/instructors in class as well as referenceing the following:
-[Wikipedia - Linked list](https://en.wikipedia.org/wiki/Linked_list)
-[Wikipedia - Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort)
-[Visualgo.net](http://visualgo.net/)
+* [Wikipedia - Linked list](https://en.wikipedia.org/wiki/Linked_list)
+* [Wikipedia - Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort)
+* [Visualgo.net](http://visualgo.net/)
