@@ -6,12 +6,9 @@ class LinkedList
   end
 
   def insert(node)
-    if @head == nil
-      @head = node
-    else
-      node.nexxt = @head
-      @head = node
-    end
+    current = @head
+    node.nexxt = current
+    @head = node
   end
 
   def search(value)
