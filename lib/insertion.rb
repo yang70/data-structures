@@ -18,8 +18,8 @@ class Insertion
 end
 
 
-insertion = Insertion.new
+# insertion = Insertion.new
 
-arr = [6, 5, 3, 1, 8, 7, 2, 4]
+# arr = [6, 5, 3, 1, 8, 7, 2, 4]
 
-puts insertion.sort arr
+# puts insertion.sort arr
