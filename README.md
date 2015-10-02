@@ -1,4 +1,4 @@
-# Data Structures - An exercise exploring basic data structure types in Ruby
+# Data Structures - An exercise exploring classic data structures and algorithms in Ruby
 
 By [Matthew Yang](http://www.matthewgyang.com).
 
