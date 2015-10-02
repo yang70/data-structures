@@ -5,7 +5,7 @@
 By [Matthew Yang](http://www.matthewgyang.com).
 
 ## Description
-This is a practice/demonstration repository to explore and create classic data structures.  These include:
+This is a practice/demonstration repository to explore and create classic data structures and sorting algorithms.  These include:
 
 * **Insertion-Sort algorithm** - *still in progress*
 
