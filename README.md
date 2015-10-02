@@ -1,5 +1,7 @@
 # Data Structures - An exercise exploring classic data structures and algorithms in Ruby
 
+[![Build Status](https://travis-ci.org/yang70/data-structures-and-algorithms.svg?branch=queue)](https://travis-ci.org/yang70/data-structures-and-algorithms)
+
 By [Matthew Yang](http://www.matthewgyang.com).
 
 ## Description
