@@ -15,10 +15,10 @@ This is a practice/demonstration repository to explore and create classic data s
 
 * **Queue** - I created this data-structure similarly to the `Stack` class listed above, in that I built off of my previous `LinkedList` class.  The idea of a `Queue` is the classic first-in-first-out (FIFO) or 'checkout-line' type of linear structure, where the first node placed in line is the first one out.  It's basically an inverse of the `Stack`, which is last-in-first-out (LIFO) linear structure.  The three methods available are `enqueue`, `dequeue` and `size`.  I decided that I would consider the `@head` of the `LinkedList` would be considered the front of the line and designed the `dequeue` method from there, making sure to check if `@head` was `nil`.  For `enqueue` I wrote a private method that traverses the `LinkedList` and returns the final node, or `nil` if the list is empty.  I can then set `nexxt` of that last node to be a new node with the desired value.  `size` was solved similarly, by traversing the `LinkedList` and counting each iteration or returning `nil` if the list is empty.
 
-**Testing/Continuous Integration**
+## Testing/Continuous Integration
 There is a test suite for all structures/algorigthms and continuous integration was implemented with [Travis CI](https://travis-ci.org/).
 
-**Credit**
+## Credit
 ______
 Created with input from discussions with classmates/instructors in class as well as referenceing the following:
 * [Wikipedia - Linked list](https://en.wikipedia.org/wiki/Linked_list)
