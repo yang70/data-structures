@@ -7,7 +7,9 @@ By [Matthew Yang](http://www.matthewgyang.com).
 ## Description
 This is a practice/demonstration repository to explore and create classic data structures and sorting algorithms.  These include:
 
-* **Insertion-Sort algorithm** - *still in progress*
+* **Insertion-Sort algorithm** - This sorting algorithm takes an array of numbers and sorts them from low to high.  It works by starting from the left side of the array and moving right, assuming the left side of the array is already sorted.  It stores the current value of the index that will be compared to indices to the left.  If the value to the left is a greater value, that value gets shifted one index to the right, and the current value gets set to the index it was compared to and the comparison moves one more to the left. If the value being compared is greater than or equal to the value to it's left, it is held in place and the search moves on to the next index in the array.
+
+Theoretically, this algorithm has a worst case O(n^2) for an array that is in reverse order, and is adaptive to a best case of an already sorted array O(n).  I benchmarked my algorithm against three 20 digit arrays; sorted, reversed and random.  After iterating each sort 100,000 times, the time difference was 1 tenth of a second or less (all just under 3 seconds), so close almost statistically insiginificant in my opinion.  Even after bumpint it to 1 million iterations, the time difference between the 3 sorts was + or - 1 tenth of a second (this time just under 30 seconds per array).  I can only conclude that my algorithm must not be a true, adaptive, insertion sort.
 
 * **Linked List** - I did this through creation of a singly `LinkedList` class, which is made up of `Node` classes.  A signly linked list knows which `Node` was the last added, called the `head`.  Each `Node` contains a value and knows of the next value in the list.  The final `Node` in the list points to `nil`.  It can be visualized like a train of nodes each pointing to the next in line, starting at the `head`, however in reality it's more that each subsequent `Node` is nested within the previous.  My linked list class contains methods to `insert` a `Node` at the `head`, `search` for and return a specific `Node`, `remove` and return a specific `Node` from the list, and finally a `to_s` method to display the list contents.  There are also tests for these functions in a `spec` directory.
 
@@ -17,6 +19,8 @@ This is a practice/demonstration repository to explore and create classic data s
 
 ## Testing/Continuous Integration
 There is a test suite for all structures/algorigthms and continuous integration was implemented with [Travis CI](https://travis-ci.org/).
+
+Insertion Sort has benchmarks built into it's test that compare the different times needed to sort an array of 20 integers starting sorted, reversed or randomized.  The sort is run 100,000 times for each different array.
 
 ## Credit
 ______

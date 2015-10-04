@@ -1,7 +1,6 @@
 require_relative 'linked_list'
 
 class Queue
-
   def initialize
     @list = LinkedList.new
   end
@@ -26,12 +25,12 @@ class Queue
   end
 
   def size
-    if @list.head == nil
+    if @list.head.nil?
       0
     else
       count = 1
       current = @list.head
-      while current.nexxt != nil
+      until current.nexxt.nil?
         current = current.nexxt
         count += 1
       end
@@ -42,11 +41,11 @@ class Queue
   private
 
   def find_last
-    if @list.head == nil
+    if @list.head.nil?
       nil
     else
       current = @list.head
-      while current.nexxt != nil
+      until current.nexxt.nil?
         current = current.nexxt
       end
       current

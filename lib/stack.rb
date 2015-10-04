@@ -1,7 +1,6 @@
 require_relative 'linked_list'
 
 class Stack
-
   def initialize
     @list = LinkedList.new
   end

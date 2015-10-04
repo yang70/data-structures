@@ -14,7 +14,7 @@ class LinkedList
   def search(value)
     current = @head
     while value != current.value
-      if current.nexxt == nil
+      if current.nexxt.nil?
         return nil
         break
       else
@@ -31,7 +31,7 @@ class LinkedList
       @head = current.nexxt
       return current
     else
-      while current.nexxt != nil
+      until current.nexxt.nil?
         if current.nexxt.value == target_val
           target = current.nexxt
           current.nexxt = current.nexxt.nexxt
@@ -49,7 +49,7 @@ class LinkedList
     current = @head
     string = "#{current.value}"
 
-    while current.nexxt != nil
+    until current.nexxt.nil?
       current = current.nexxt
       string += ", #{current.value}"
     end
