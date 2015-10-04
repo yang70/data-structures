@@ -16,7 +16,7 @@ describe "test that insertion is sorting correctly" do
   it "benchmarks for insertion" do
     i = 100_000
     sorted  = [*1..20]
-    reverse = [*20..1]
+    reverse = sorted.reverse
     random  = [*1..20].shuffle
 
     Benchmark.bmbm(10) do |x|
