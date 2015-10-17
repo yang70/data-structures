@@ -1,4 +1,14 @@
-class HashLinkedList
+
+class HNode
+  attr_accessor :key, :value, :nexxt
+  def initialize(key = nil, value = nil, nexxt = nil)
+    @key = key
+    @value = value
+    @nexxt = nexxt
+  end
+end
+
+class HashLinkeydList
   attr_accessor :head
 
   def initialize
@@ -6,8 +16,7 @@ class HashLinkedList
   end
 
   def insert(node)
-    current = @head
-    node.nexxt = current
+    node.nexxt = @head
     @head = node
   end
 
@@ -16,15 +25,11 @@ class HashLinkedList
       nil
     else
       current = @head
-      while key != current.key
-        if current.nexxt.nil?
-          return nil
-          break
-        else
-          current = current.nexxt
-        end
+      until current.nil?
+        return current if current.key == key
+        current = current.nexxt
       end
-      return current if current.key == key
+      nil
     end
   end
 
@@ -50,12 +55,4 @@ class HashLinkedList
   end
 end
 
-class Node
-  attr_accessor :key, :value, :nexxt
 
-  def initialize(key, value, nexxt = nil)
-    @key = key
-    @value = value
-    @nexxt = nexxt
-  end
-end
