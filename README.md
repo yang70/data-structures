@@ -21,7 +21,7 @@ Theoretically, this algorithm has a worst case O(n^2) for an array that is in re
 ##Linked List##
 A signly linked list is a data structure composed of `Nodes` that contain a value and also a pointer to the next `Node` in the list or to `nil` if it is the end of the list. The list itself keeps track of only one node which is designated the `head`, but can find any node by starting at the `head` and moving down the chain.  It can be conceptualized like a train of nodes each pointing to the next in line, starting at the `head`, however in reality it is more that each subsequent `Node` is nested *within* the previous.
 
-I first created a `Node` class that takes a value as an argument and a `nexxt` node (next is a reserved keyword so I added an `x`).  If no `nexxt` is entered, it is set to `nil` by defaule.
+I first created a `Node` class that takes a value as an argument and a `nexxt` node (next is a reserved keyword so I added an `x`).  If no `nexxt` is entered, it is set to `nil` by default.
 
 I then created a `LinkedList` class.  My linked list class contains methods to `insert` a `Node` at the `head`, `search` for and return a specific `Node`, `remove` and return a specific `Node` from the list, and finally a `to_s` method to display the list contents.
 
