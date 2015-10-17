@@ -1,4 +1,4 @@
-class LinkedList
+class HashLinkedList
   attr_accessor :head
 
   def initialize
@@ -11,12 +11,12 @@ class LinkedList
     @head = node
   end
 
-  def search(value)
+  def search(key)
     if @head == nil
       nil
     else
       current = @head
-      while value != current.value
+      while key != current.key
         if current.nexxt.nil?
           return nil
           break
@@ -24,19 +24,19 @@ class LinkedList
           current = current.nexxt
         end
       end
-      return current if current.value == value
+      return current if current.key == key
     end
   end
 
-  def remove(target_val)
+  def remove(target_key)
     current = @head
 
-    if current == @head && current.value == target_val
+    if current == @head && current.key == target_key
       @head = current.nexxt
       return current
     else
       until current.nexxt.nil?
-        if current.nexxt.value == target_val
+        if current.nexxt.key == target_key
           target = current.nexxt
           current.nexxt = current.nexxt.nexxt
           return target
@@ -48,24 +48,13 @@ class LinkedList
       return nil
     end
   end
-
-  def to_s
-    current = @head
-    string = "#{current.value}"
-
-    until current.nexxt.nil?
-      current = current.nexxt
-      string += ", #{current.value}"
-    end
-
-    string
-  end
 end
 
 class Node
-  attr_accessor :value, :nexxt
+  attr_accessor :key, :value, :nexxt
 
-  def initialize(value, nexxt = nil)
+  def initialize(key, value, nexxt = nil)
+    @key = key
     @value = value
     @nexxt = nexxt
   end
