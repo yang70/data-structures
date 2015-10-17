@@ -1,33 +1,47 @@
 require 'minitest/spec'
 require 'minitest/autorun'
+require 'hash_linked_list'
 require 'hash_table'
 require 'benchmark'
 
+
 describe "test that hash table is working correctly" do
   it "should insert, retrieve, delete" do
-    test_hash = HashTable.new(10)
+    ht = HashTable.new(10)
+    keys = %w(one two three four five)
+    val = 1;
+    keys.each{|key| ht.set(key, val); val += 1}
+  end
 
-    test_hash.set("one", 1)
-    test_hash.set("two", 2)
-    test_hash.set("three", 3)
-    test_hash.set("four", 4)
-    test_hash.set("five", 5)
+  it "should be benchmarked" do
 
-    puts test_hash.get("two")
-    puts test_hash.delete("two")
-  #   test_hash = HashTable.new(10)
-  #   test_hash.set("key", "value")
-  #   puts test_hash.get("key").inspect
-    # keys  = %w(one two three four five)
+    word_hash_x_small = HashTable.new(10)
+    word_hash_small   = HashTable.new(100)
+    word_hash_medium  = HashTable.new(500)
+    word_hash_large   = HashTable.new(1000)
+    word_hash_x_large = HashTable.new(5000)
 
-    # (1..5).each do |val|
-    #   test_hash.set(keys[val - 1], val)
-    # end
+    words_array = []
 
-    # (5..1).each do |val|
-    #   test_hash.get(keys[val - 1]).must_equal val
-    # end
+    File.open("/usr/share/dict/words") do |file|
+      file.each do |file|
+        words_array << file.strip
+      end
+    end
 
-    # puts test_hash.get("one")
+    n = words_array.length - 1
+    puts
+    puts
+    puts "Number of words: #{n}"
+
+    Benchmark.bm(18) do |x|
+      # x.report("X Small") { for i in 0..n; word_hash_x_small.set(words_array[i], words_array[i].reverse); end }
+      # x.report("Small") { for i in 0..n; word_hash_small.set(words_array[i], words_array[i].reverse); end }
+      # x.report("medium") { for i in 0..n; word_hash_medium.set(words_array[i], words_array[i].reverse); end }
+      x.report("1,000 - Insert") { for i in 0..n; word_hash_large.set(words_array[i], words_array[i].reverse); end }
+      x.report("1,000 - Retrieve") { for i in 0..n; word_hash_large.get(words_array[i]); end }
+      x.report("5,000 - Insert") { for i in 0..n; word_hash_x_large.set(words_array[i], words_array[i].reverse); end }
+      x.report("5,000 - Retrieve") { for i in 0..n; word_hash_x_large.get(words_array[i]); end }
+    end
   end
 end

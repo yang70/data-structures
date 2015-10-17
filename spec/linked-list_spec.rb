@@ -1,6 +1,6 @@
 require 'minitest/spec'
 require 'minitest/autorun'
-require 'linked_list'
+# require 'linked_list'
 
 describe "linked list class creating correctly" do
   it "should insert corrently and set as head" do

@@ -14,7 +14,7 @@ describe "test that insertion is sorting correctly" do
   end
 
   it "benchmarks for insertion" do
-    i = 1_000
+    i = 100_000
     sorted  = [*1..20]
     reverse = sorted.reverse
     random  = [*1..20].shuffle
