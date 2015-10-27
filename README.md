@@ -1,4 +1,4 @@
-# Data Structures - An exercise exploring classic data structures and algorithms in Ruby
+# Data Structures - An exercise exploring classic data structures and algorithms in Ruby and JavaScript
 
 [![Build Status](https://travis-ci.org/yang70/data-structures-and-algorithms.svg?branch=queue)](https://travis-ci.org/yang70/data-structures-and-algorithms)
 
