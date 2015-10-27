@@ -84,6 +84,12 @@ Results of hashing and retrieving the entire library of words for Large and Extr
 
 ![benchmark](https://s3.amazonaws.com/mystufftoshare/hash-benchmark.png)
 
+##Binary Search Tree - JavaScript##
+[github.com/yang70/binary-search-tree_javascript](https://github.com/yang70/binary-search-tree_javascript)
+
+##Doubly Linked List - JavaScript##
+[github.com/yang70/doubly-linked-list-javascript](https://github.com/yang70/doubly-linked-list-javascript)
+
 #Testing/Continuous Integration#
 ##Travis CI##
 There is a test suite for all structures/algorigthms and continuous integration was implemented with [Travis CI](https://travis-ci.org/).
