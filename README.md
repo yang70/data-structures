@@ -7,6 +7,12 @@ By [Matthew Yang](http://www.matthewgyang.com).
 ##Description##
 This is a practice/demonstration repository to explore and create classic data structures and sorting algorithms.  These include:
 
+##Binary Search Tree - JavaScript##
+[github.com/yang70/binary-search-tree_javascript](https://github.com/yang70/binary-search-tree_javascript)
+
+##Doubly Linked List - JavaScript##
+[github.com/yang70/doubly-linked-list-javascript](https://github.com/yang70/doubly-linked-list-javascript)
+
 ##Insertion-Sort algorithm##
 This sorting algorithm takes an array of numbers and sorts them from low to high.  It works by starting from the left side of the array and moving right, assuming the left side of the array is already sorted.
 
@@ -83,12 +89,6 @@ Ideally for insertion/retrieval, there would be one slot in the array for each v
 Results of hashing and retrieving the entire library of words for Large and Extra Large hash's can be seen below.  Interestingly, a `HashTable` of size 1,000 is only slightly slower than one of 5,000.  Therefore 1,000 would be a nice compromise of speed and unneeded memory usage.
 
 ![benchmark](https://s3.amazonaws.com/mystufftoshare/hash-benchmark.png)
-
-##Binary Search Tree - JavaScript##
-[github.com/yang70/binary-search-tree_javascript](https://github.com/yang70/binary-search-tree_javascript)
-
-##Doubly Linked List - JavaScript##
-[github.com/yang70/doubly-linked-list-javascript](https://github.com/yang70/doubly-linked-list-javascript)
 
 #Testing/Continuous Integration#
 ##Travis CI##
