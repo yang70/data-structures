@@ -41,10 +41,35 @@ I created this data-structure similarly to the `Stack` class listed above, in th
 
 The three methods available are `enqueue`, `dequeue` and `size`.  I decided that I would consider the `@head` of the `LinkedList` would be considered the front of the line and designed the `dequeue` method from there, making sure to check if `@head` was `nil`.  For `enqueue` I wrote a private method that traverses the `LinkedList` and returns the final node, or `nil` if the list is empty.  I can then set `nexxt` of that last node to be a new node with the desired value.  `size` was solved similarly, by traversing the `LinkedList` and counting each iteration or returning `nil` if the list is empty.
 
+##Binary Tree##
+This data structure is a simple Binary tree, meaning it begins at a single `root` element.  Each element has a `value`, a `left` branch and a `right` branch.  If the element is a 'leaf' (final element) it's `left` and `right` branches are set to `nil`.
+
+I designed this structure to have only a single class `Binary_tree` which builds off of itself and where a binary tree structure is made up of `Binary_tree`'s, or in other words there is no `node` class.
+
+I created this structure after creating a [Binary Search Tree in JavaScript](https://github.com/yang70/binary-search-tree_javascript), and therefore it borrows heavily from the methods I had previously created.  These are the three depth-first traversals, which incorporate a recursive algorithm to return values in a specific order. These are:
+
+* Pre-order - self, left, right
+* In-order - left, self, right
+* Post-order - left, right, self
+
+Here is an example of the `in_order` algorithm:
+```ruby
+def in_order
+  leftValues = []
+  rightValues = []
+
+  leftValues = @left.in_order if @left
+  rightValues = @right.in_order if @right
+
+  leftValues.concat([@value]).concat(rightValues)
+end
+```
+After creating a good recursive algorithm, it's just a matter of concatenating the results correctly and then returning them in the desired format (I chose an array).
+
 ##Hash Table##
 The hash is a data structure that is widely used in Ruby programs and all across Rails applications.  On the surface it seems simple, it's just a `key:value` pair.  But digging deeper the question arises, how does the computer store and retrieve these references in relation to other items in the same hash?
 
-In order to better understand the structure we were instructed to implement our own.  The basic idea is the hash table itself will be an array of linked lists with a size determined on creation.  The `Key` will be restricted to a string, and when data is inserted a `Hash` method is run on the strings name to determine which index in the array it will be added to.  The `key:value` pair will then be inserted into the linked list at the designated index.  On retrieval or deletion, the `key` that is provided will run through the same hashing algorithm that will point to the same index then retrieved from the specific linked list via mathing to the exact `key` given.
+In order to better understand the structure we were instructed to implement our own.  The basic idea is the hash table itself will be an array of linked lists with a size determined on creation.  The `Key` will be restricted to a string, and when data is inserted a `Hash` method is run on the strings name to determine which index in the array it will be added to.  The `key:value` pair will then be inserted into the linked list at the designated index.  On retrieval or deletion, the `key` that is provided will run through the same hashing algorithm that will point to the same index then retrieved from the specific linked list via matching to the exact `key` given.
 
 I decided to build upon my previous `LinkedList` class, however modified it slightly to allow a node to store a `key` and `value`.  This file was renamed to `hash_linked_list`.
 
