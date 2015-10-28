@@ -30,10 +30,10 @@ describe "test that hash table is working correctly" do
     end
 
     n = words_array.length - 1
-    puts
-    puts
-    puts "Number of words: #{n}"
 
+    puts
+    puts "*** Hash Table Benchmark ****************************"
+    puts "Number of words: #{n}"
     Benchmark.bm(18) do |x|
       # x.report("X Small") { for i in 0..n; word_hash_x_small.set(words_array[i], words_array[i].reverse); end }
       # x.report("Small") { for i in 0..n; word_hash_small.set(words_array[i], words_array[i].reverse); end }
