@@ -12,11 +12,11 @@ class Array
 
     while (left.length > 0) || (right.length > 0)
       if left.length == 0
-        sorted << right
-        return sorted.flatten
+        sorted += right
+        return sorted
       elsif right.length == 0
-        sorted << left
-        return sorted.flatten
+        sorted += left
+        return sorted
       else
         if left[0] <= right[0]
           sorted << left.shift
