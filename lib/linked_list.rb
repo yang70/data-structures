@@ -12,16 +12,20 @@ class LinkedList
   end
 
   def search(value)
-    current = @head
-    while value != current.value
-      if current.nexxt.nil?
-        return nil
-        break
-      else
-        current = current.nexxt
+    if @head == nil
+      nil
+    else
+      current = @head
+      while value != current.value
+        if current.nexxt.nil?
+          return nil
+          break
+        else
+          current = current.nexxt
+        end
       end
+      return current if current.value == value
     end
-    return current if current.value == value
   end
 
   def remove(target_val)
