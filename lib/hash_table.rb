@@ -11,7 +11,7 @@ class HashTable
 
   def set(key, val)
     if get(key)
-      raise "key is already takeyn"
+      raise "key is already taken"
     else
       node = HNode.new(key, val)
       @table[hash key].insert node
